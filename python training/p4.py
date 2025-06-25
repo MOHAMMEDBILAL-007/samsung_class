@@ -8,4 +8,4 @@ elif average_score in range(85,96):
 elif average_score in range(96,101):
     print("result is excellent")
 else:
-    print("invalid average score")
+    print("invalid average score")#dfhfd
