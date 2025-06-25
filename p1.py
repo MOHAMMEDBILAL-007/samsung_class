@@ -1,6 +1,4 @@
-#check thr number is even or not even
+#check if the number is even
 input_number = int(input("enter the number : "))
 if input_number % 2 == 0:
     print("number is even")
-else:
-    print("number is not even")
