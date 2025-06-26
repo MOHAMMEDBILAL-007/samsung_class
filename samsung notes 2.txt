@@ -1,0 +1,25 @@
+PYTHON
+
+day 3 wednesday 25-6-2025
+operators in python :
+
+-arthematic operators:
+	+, -, *, /, //,**,%
+	all the arthematic operations are binary operations
+	inpython operations are done from left to right
+	while performing operations presidence comes to play rather than left to right
+	** has the heighest presidence
+	* / // % has next presidence
+	+ - has the lowest presidence
+	example:
+		2 + 3 * 2 ** 2
+		2 + 3 * 4
+		2 + 12
+		14
+	2.5 + 5
+	here we cannot perform the operation until we convert 5 to decimal
+	
+	
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+day 4 thursday 26-6-2025

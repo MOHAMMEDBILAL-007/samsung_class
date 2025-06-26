@@ -1,0 +1,65 @@
+day 3 tuesday 24-6-2025
+
+HOW TO USE GIT AND GITHUB - through commands
+* must have installed git in the sytsem
+*create a repo in git hub
+*open command prompt and navigate cmd to the location (or) open cmd in the location
+
+1.first you need to config your name and email to the system so that it can decide wher to apply changes or where to operate
+-setting user name command
+	>git config --global user.name "name of the user"
+-setting email command
+	>git config --global user.email "example@gmail.com"
+it is most important thing to do before clonaing or doing any operations
+if you ever need to change the user or email id you just re-write the above commands with new mail and name this overrides the previous name and email
+
+2.cloning the cloud repositry to local system to operate on the system
+-cloning command
+	git clone https://github.com/username/repo-name.git
+by this the repo is cloned into the local system
+
+3.Make Changes to Files
+Add, delete, or edit files
+you can do it manually in the file manager or vs code or notepad
+-commands 
+Create a new file using echo:
+	echo "This is a new file" > newfile.txt
+Create an empty file:
+	type nul > emptyfile.txt
+Append text from CMD:
+	echo "New line added" >> filename.txt
+Delete using Git-aware command:
+	git rm filename.txt
+
+4.Stage the Changes
+Tell Git what you want to commit
+-command
+	>git add file.txt
+	(or)
+	>git add .
+Here I want to include this file (or these changes) in the next commit
+
+6.To know the current state of the repo of the git hub we user
+-command
+	>git status
+	
+5. Commit the Changes
+Save your changes locally with a message
+Take all staged files and save them as a permanent snapshot in the Git history
+-command
+	git commit -m "Added a new feature"
+
+6. Push Changes to GitHub
+Send local commits to GitHub
+-command
+	>git push origin main
+	(or)
+	>git push
+these changes are permanently saved in the  github
+
+7.Pull latest changes from github
+Download and merge new commits from GitHub into your local repo
+-command
+	>git pull origin main
+	(or)
+	>git pull
