@@ -61,12 +61,12 @@ read about function call stack
 
 arry/list
  
-A list in Python is a collection of ordered, mutable elements. It can hold elements of different data types, including numbers, strings, objects, or even other lists.
-indexable - Access elements using index positions (list[0], list[1], etc.)
-Heterogeneous - Can store items of different data types (int, str, float, list, etc.)
-Iterable - Can be used in loops (like for item in list)
-Dynamic size - Size can grow or shrink automatically
-Allows duplicates - Can contain duplicate values
+*A list in Python is a collection of ordered, mutable elements. It can hold elements of different data types, including numbers, strings, objects, or even other lists.
+*indexable - Access elements using index positions (list[0], list[1], etc.)
+*Heterogeneous - Can store items of different data types (int, str, float, list, etc.)
+*Iterable - Can be used in loops (like for item in list)
+*Dynamic size - Size can grow or shrink automatically
+*Allows duplicates - Can contain duplicate values
 
 1 - find the smallest and biggest value in the list of n numbers
 
@@ -118,7 +118,12 @@ except zerodivisionerror:
 	pass
 except:  <-- this should be at the last
 	pass
-	
+
+inheritence is the procces of adding new featurs or the adding new solution to the existing problem 
+it basically is inheriting properties from parent to childrens along with childrens own properties
+
+polymorphism allows the same function, method, or operator to behave differently based on the context or data type
+
 **
 
 list methods:
