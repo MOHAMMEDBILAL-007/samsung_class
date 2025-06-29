@@ -8,9 +8,8 @@ def pop():
     if len(stack1)==0:
         print("stack under flow")
     else: 
-        item = int(input("Enter the item to be poped: "))
-        del stack1[0]
         print(f"{stack1[0]} was deleted from the stack")
+        del stack1[0]
 def display():
     print("stack contains the following elements")
     for i in stack1:
