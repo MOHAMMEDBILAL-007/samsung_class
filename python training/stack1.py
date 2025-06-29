@@ -7,9 +7,10 @@ def push():
 def pop():
     if len(stack1)==0:
         print("stack under flow")
-    item = int(input("Enter the item to be pushed: "))
-    del stack1[0]
-    print(f"{stack1[0]} was deleted from the stack")
+    else: 
+        item = int(input("Enter the item to be poped: "))
+        del stack1[0]
+        print(f"{stack1[0]} was deleted from the stack")
 def display():
     print("stack contains the following elements")
     for i in stack1:
