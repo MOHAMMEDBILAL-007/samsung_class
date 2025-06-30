@@ -121,6 +121,7 @@ polymorphism allows the same function, method, or operator to behave differently
 **
 implement stack using list
 
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+day 7 monday 30-6-2025
 
-
-
+in a function can have default arguments 
