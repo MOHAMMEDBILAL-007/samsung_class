@@ -2,6 +2,20 @@ PYTHON
 
 day 3 wednesday 25-6-2025
 operators in python :
+Floating Point Representation:
+Floating-point numbers are stored based on the IEEE 754 standard.
+
+32-bit Float (Single Precision):
+1 bit → Sign bit (positive or negative)
+8 bits → Exponent (with bias)
+23 bits → Mantissa (also called significand)
+
+64-bit Float (Double Precision):
+1 bit → Sign
+11 bits → Exponent
+52 bits → Mantissa
+
+Python emphasizes readability and explicitness. Having ++ and -- is unnecessary and can be confusing.
 
 -arthematic operators:
 	+, -, *, /, //,**,%
