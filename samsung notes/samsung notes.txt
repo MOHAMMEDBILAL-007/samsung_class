@@ -125,3 +125,14 @@ implement stack using list
 day 7 monday 30-6-2025
 
 in a function can have default arguments 
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+day 9 wednesday 2-7-2025
+
+searching and sorting algorithms
+lenear search 
+
+
