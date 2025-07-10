@@ -122,18 +122,1041 @@ polymorphism allows the same function, method, or operator to behave differently
 implement stack using list
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
-day 7 monday 30-6-2025
+DAY-7 Monday 30-06-2025 
 
-in a function can have default arguments 
+How inheritance is technically implemented?
+Why a constructor cannot be final abstract and static?
+Why main() is public static and void?
+Explain runtime polymorphism (method over-riding).
+What is collection and explain its use and memory mapping.
+
+List Comprehension:
+list is a DS in Python (pre defined). list is a class
+list is ordered
+list is mutable
+
+l1 = [1, 43, 3, 2, 5]
+
+l2 = [1, 2, 5, 4, 3]
+
+name = 'shanmugha'
+
+name.find('u')
+name.find('mu', 2)
+name.find('uu', 2, 7)
+name.index('mugha', 3, 7)
+------------------------------------------
+original_str = 'college'
+
+i++
+j--
+a[i] = b[j]
+b[j]++
+
+a[++i] = b[--j]++ // low cohesive
+----------------------------------
+2 servers
+2 types of requests
+allocation +ve number
+deallocation -ve number
+
+N
+45  -13  -30  -10  50  35  -5  5  8
+0         2         4
+
+45 + (-30) + 50 + (-5) + 8
+68 units of memory is allocated by server1
+----------------------------------- 
+Read N,  X  and Y
+X + Y = N
+
+numbers = []
+Read N numbers in to numbers
+
+sort numbers (ascending)
+p = numbers[y] - nunmbers[y-1] - 1
+print p
+
+-------------------------------------------
+def check_arrangement(b, g)
+	arrangment = true
+	for i in range(1, n):
+		if girls[i] >= boys[i-1] and boys[i] >= girls[i-1]:
+			continue # go to the next iteration
+		else:
+			arrangment = False
+			break # Once we know such arrangment is not possible, quit
+	if arrangment and (g[0] >= b[0] and g[-1] >= b[-1]) or (b[0] >= g[0] and b[-1] >= g[-1])
+		return "yes"
+
+Read T
+output[]
+	for T times do:
+		Read N
+		g[]
+		b[]
+		Read N heights of g[]
+		Read N heights of b[]
+		sort g[]
+		sort b[]
+		result = check_arrangement(b, g)
+		output.append(result)
+print output
+----------------------------------------
+DAY9 WEDNESDAY 02-07-2025
+
+Bubble Sort:
+In this sorting technique we start from any of the 2 ends of the list and compare consecutive elements.
+Assuming we start from Left and wish to sort in scaending order, we swap the elements if the left element is bigger than the right one.
+Continue doing so upto the end of UNSORTED ARRAY and thus we have put the biggest element in the unsorted array in its final position.
+Thus the element is taken from the unsorted array into the sorted array.
+
+RUN: Accessing all the elements in an array exactly once from one end of the array to the other.
+In Bubble sort, we bring the element into its final position in one Run over the unsorted array.
+
+Bubble sort doesnt predict anything before starting the sort algorithm nor it knows if the list is already sorted (i.e. after the 1st Run)
+
+The biggest element of the specific Run is moved to its final position. This is called as BUBBLING the element to a corner.
+
+While comparing the elements if we observe that there are no Swaps in a Run, then the list is already sorted.
+Thus we have a way to optimize the Bubble Sort. The optimzed Bubble sort has an improved efficiency of O(n).
+
+The Bubble Sort Algorithm:
+Start from one end and move towards other end of unsorted array
+	compare consecutive elements
+	if left element is bigger than the right
+		swap the elements
+
+With each iteration of the Run, the size of sorted list increases by one while the size of unsorted array decreases by one element.
+
+Pseudocode
+
+Assume input size to be N
+for i from 1 to N-1 do:
+	for j from 1 to N-1-i do:
+		if list[j] > list[j+1]
+			swap list[j], list[j+1]
+
+The outer loop Runs through the list (Accessing elements of the list exactly once)
+The inner loop compares consecutive elements of the unsorted list
+
+Optimized Bubble Sort:
+for i from 1 to N-1 do:
+	sorted = True # Assume the list is already sorted
+	for j from 1 to N-1-i do:
+		if list[j] > list[j+1]
+			swap list[j], list[j+1]
+			sorted = False
+	if(sorted)
+		break outer loop
+
+BCE of improved(optimised) Bubble sort is O(n)
+WCE of Bubble sort O(n2)
 
 
+1 2 3 4 5 6 7 8 9 10
+1  + 10 = 11
+2  + 9  = 11
+
+(1 + n) * (n / 2)
+= 11 * 5 = 55
+
+1 2 3 4 5 6 7 8 9.... 50
+1 + 50 = 51
+2 + 49 = 51
+
+25+ 26 = 51
+(1+50)*25 = 1275
+----------------------------------
+n-1 times the outer loop works
+i=1  n-2 times
+i=2  n-3 times
+i=3  n-4
+
+i=n-1  n=1
+1 + 2 + 3 + .... n-3 + n-2 + n-1
+n(n-1)/2
+n2/2 - n/2
+= n2/2
+= n2
+
+8000
+3_20_00_000 - 4_000
+= 3_20_00_000
+
+The Bubble sort doesnt follow any specific mathematical formula or technique.
+Its solution is what we find on day to day basis.
+Thus it has come from centuries of commonly used problem solving technique (Trivial way of problem solving)
+Which is said to come under BRUTE FORCE TECHNIQUE.
+Thus In Brute Force technique there is Inventor Name.
+---------------------------------------------
+Selection Sort (Brute Force Technique)
+
+23   4    1    33    22   19   50    25
+i=1
+element  = 23  4   1
+position = 1   2   3
+After the loop has excited, swap the elements at positions position and i
+1   4    23    33    22   19   50    25
+i=2
+element  = 4 
+position = 2
+1   4    23    33    22   19   50    25
+i=3
+element  = 23  22  19 
+position = 3   5    6
+1  4  19  33  22  23  50  25
+
+In each iteration of i, we SELECT the ith smallest element and put in its final position.
+
+Thus, there are N-1 iterations for i
+And N-1-i comparisons in each iteration of i
+
+Assignment: Can we optimize Selection Sort the way we did with Bubble sort and thus bring the BCE of Selection sort from O(n2) to O(n)
+
+NOTE: We need not apply any sorting on the given array when (when we know the given array is already sorted)
+
+for i from 2 to N do:
+	element = list[i-1]
+	position = i-1
+	for j = i-1 to N do:
+		if list[j] < element then:
+			element = list[j]
+			position = j
+	swap list[position] with list[i-1]
+---------------------------------------
+Quick Sort
+
+CLASS_SIZE = 50
+total_training_amount = training_fee * CLASS_SIZE
+
+-------------------------------------
+SESSION-11 03-07-2025 THURSDAY
+
+employee:
+	id, name, designation, phone_number, salary, commission, years_of_experience, technology
+
+id				int			primary key auto_increment
+name			varchar(30)	not null
+designation		varchar(30)	
+phone_number	bigint		unique
+salary			float		
+commission		float		default(0)
+years_of_experience tinyint	
+technology		varchar(30)	not null
+
+create database nithin_db;
+create table employees();
+
+insert into employees()
+20 rows/tuples 
+5 rows must have all values
+5 rows do not add some of the values
+5 rows do not add all the values that we can skip
+5 rows as you wish
+
+CRUD OPERATIONS:
+Create one row			post		
+Read/Retrieve one/all	get  	(with id or without)
+Update					put		(with id)
+Delete					delete	(with id)
+
+Chapter2 Assessment Link:
+https://docs.google.com/forms/d/1ZD-UzOZW4RbdvV4h4k_UoCxmQaLfadbOjnSdwsItV2o/edit
+
+---------------------------------------------------------------
+OBJECT ORIENTED PROGRAMMING CONCEPTS:
+Inheritance: 
+polymorphism:
+abstraction:
+encapsulation:
+
+super()
+private members using _ (underscore)
+inherit in Python 
+class Derived (Base):
+
+Parent most class in Python Obj
+There is no compile time in Python. Hence no question of static polymorphism (function over loading)
+
+When a Function is called:
+Prologue
+Business logic
+Epilogue
+
+static member:
+
+class Cubical:
+	str printer
+	water_dispencer
+	def __init__(self):
+		chair
+		mug
+		computer
+		drawer
+
+	@static
+	def get_printer(cls):
+		return printer
+
+-----------------------------------------------------------------------------
+Tree:
+-> TREE is a DS
+-> Non Linear DS
+-> ACYCLIC DS (All PATHs in the DS are unique)
+-> The start/entry point of a Tree is called as ROOT
+-> Synonym for Tree is HIERARCHICAL DS
+Example: File System (Random Tree)
+-> BINARY TREE is a Tree which has a maximum (at most) of 2 CHILD NODES for every possible NODE in the Tree.
+-> The Root Node of the Tree is said to be at a LEVEL 1. Thus its immediate child node is at a LEVEL 2 and so on.
+The maximum possible Level in a Tree is said be DEPTH or HEIGHT of the Tree.
+In a Binary Tree of a Height N, we can have maximum of (2 power N) - 1 nodes.
+TRAVERSAL in a Tree is when we move from the current node to one of its immediate child node.
+A Tree with exactly or almost 2N-1 nodes is said to be COMPLETE BINARY TREE.
+The 2 child nodes of a node in a binary tree are said to be LEFT-CHILD and RIGHT-CHILD
+The Tree we can traverse strating from the Left-Child Node is said to be LEFT SUB-TREE and thus we can have Right Sub-Tree
+In a Complete Binary tree (BT) every traversal will isolate or remove 50% of the search area.
+If in a BT every node has exactly Zero or Two child nodes only, then such a BT is said to be STRICTLY BT.
+If in a BT, the data is ARRANGED in such way that data of the left child of every node is smaller than its own data (data of Parent node) and data of the right child node is greater than or equal to its own data, then such a BT is called as BINARY SEARCH TREE (BST).
+In a BST if the number of nodes is very small than 2N-1 (where N is tree height) then such a tree is said be UNBALANCED TREE. Conversly balanced tree and perfectly balanced is COMPLETE BST or BBST.
+The highest level in a tree is the HEIGHT of the tree.
+A node with  no child nodes is said to be LEAF NODE (Brahmachari node)
+While traversing a BT when ever we reach a new node, it itself can be considered as Root and the nodes that can be reached from it as nodes of the tree. Thus to perform any operation on a BT, we always Traverse and while traversing (for traversal) we can apply the solution RECURSSIVELY.
+Traversal exactly is to reach every node in the Tree exactly Once.
+If you traverse the BT in the order Left-Root-Right (LR`R) then it is said to be In-Order traversal.
+If you traverse the BT in the order Root-Left-Right (R`LR) then it is said to be In-Order traversal.
+If you traverse the BT in the order Left-Right-Root (LRR`) then it is said to be In-Order traversal.
+A new node is always added into the BST as Leaf Node.
+
+Balancing a BST
+Self balancing BST
+Contructing a BST using 2 traversals 
+CRUD operations
+
+Deleting a node from a BST:
+1. node with 0 child nodes 
+2. node with 1 child nodes 
+3. node with 2 child nodes
+--------------------------------------------------------------------
+SESSION-14  08-07-2025
+
+https://docs.google.com/forms/d/1J2g0nOomI3mav_t2LzcTLgtID6Ne1KNHCt5oLullvQE/edit
+
+def my_function(param1, param2 = 10):
+    pass
+
+def my_function2(param1 = 10, param2):
+    pass
+
+my_function(10)
+my_function2(10)
+-----------------------
+def my_function(y):
+	def inner_function(x):
+		return x + y   # return x + 5
+	return inner_function
+
+closure = my_function(5)
+print(closure(10)) # outputs 15
+
+int num = 10;
+int* ptr = NULL;
+ptr = &num;
+
+float my_func(int, char); // function declaration
+
+float (*fp)(int, char); // function pointer declaration
+fp = &my_func
+
+A pointer of a specific DT can point any variable of that DT
+A function pointer of a specific prototype(SIGNATURE) can point to any function of that particular signature.
+----------------------------------------------------
+Deletion of a node in a BST:
+1. If the node to be deleted is leaf node:
+	Make the respective link of the Parent node of the node being deleted None.
+2. If node to be deleted has one child
+	Replace the child node of the node being deleted with itself.
+3. If node to be deleted has 2 children
+	Make the right child of the node being deleted, the right child of its parent (Thus the right grand child become right child). The right child of the node being deleted replaces itself.
+	And the left child node (and its descendents(sub tree)) becomes the left child of the left most child of its right child.
+4. What is we are deleting the root itself (when it has 2 child nodes) ???
+-------------------------------------------------------
+PDB: Python debugger
+Debugging is the skill of tracing the logic.
+Tracing the logic is to halt the execution of the program at specified instructions and cheking the state of the program.
+We do this by checking the values of the variables at certain specific instruction in the code.
+For example, we set a break point at a certain instruction inside a loop and check the value of a particular variable to make sure it is changing its value as expected.
+
+What we can achive via debugging:
+1. We can check the values of the variables at any given point of time during Debugging
+2. We can print the stack (call stack)
+3. We can apply break points
+4. We can apply check points
+5. Match points
+6. set points
+7. jump into a function (step)
+8. move to next instruction (next)
+
+Command To run a python scrpit (program) in debug mode:
+python -m pdb your_script_name.py
+
+alternatively we can use the module pdb:
+import pdb
+pdb.set_trace()
+
+import pdb
+pdb.set_trace()
+
+def check_palindrome(number): # call by value
+    reverse_number = 0
+    while number != 0:
+        remainder_digit = number % 10
+        number = number // 10
+        reverse_number = reverse_number * 10 + remainder_digit
+    return reverse_number
+
+input_number = int(input('Enter a number to check if it is Palindroime: '))
+reverse_number = check_palindrome(input_number)
+if reverse_number == input_number:
+    print('Palindrome')
+else:
+    print('Not a Palindrome')
+-------------------------------------------------------
+import numpy as np
+
+array1 = np.zeros(3)
+print(f'Array1 = {array1}')
+
+array2 = np.zeros((1, 4))
+print(f'Array2 = {array2}')
+
+array3 = np.zeros((2, 5))
+print(f'Array3 = {array3}')
+---------------------------------------------
+import numpy as np
+
+array1 = np.zeros(3)
+array2 = np.zeros((1, 4))
+array3 = np.zeros((2, 5))
+
+print(array1[0], array1[2])
+print(array2[0][0], array2[0][3])
+print(array3[1][0], array3[1][3])
+-------------------------------------------------
+import numpy as np
+
+array1 = np.zeros(3)
+array2 = np.zeros((1, 4))
+array3 = np.zeros((2, 5))
+
+print(array1[4]) # IndexError
+print(array1[0][0]) # SyntaxError array1 is not 2D array
+print(array2[2][0]) # IndexError
+print(array2[1][0]) # IndexError
+print(array3[3][3]) # IndexError
+--------------------------------------------
+import numpy as np
+
+array1 = np.zeros(3)
+array2 = np.zeros((1, 4))
+array3 = np.zeros((2, 5))
+
+print(type(array1))
+print(type(array2))
+print(type(array1[0]))
+print(type(array2[0]))
+print(type(array2[0][0]))
+----------------------------------------------
+import numpy as np
+
+array1 = np.full((2, 4), 5)
+print(array1)
+array2 = np.full((1,5), 10)
+# Here array2 is still a ndarray
+print(array2)
+
+array1 = np.full((2, 4), 5, dtype=int)
+array1 = np.full((2, 4), 5, dtype=np.float64)
+------------------------------------------------
+import numpy as np
+# arange()
+
+array1 = np.arange(10)
+array2 = np.arange(10, 20)
+array3 = np.arange(10, 30, 3)
+
+print(type(array1))
+print(array1)
+print(array2)
+print(array3)
+------------------------------------------------------
+import numpy as np
+# ones()
+
+array1 = np.ones(10)
+array2 = np.ones((2, 8))
+array3 = np.ones((3, 5))
+
+print(type(array1))
+print(array1)
+print(array2)
+print(array3)
+---------------------------------------------
+import numpy as np
+
+vector = np.arange(5)
+print('Vector shape:', vector.shape)
+
+matrix = np.ones([3, 2])
+print('Matrix:', matrix)
+print('Matrix shape:', matrix.shape)
+
+tensor = np.zeros([2, 3, 3])
+print('Tensor:', tensor)
+print("Tensor shape:", tensor.shape)
+-------------------------------------------------
+import numpy as np
+
+arr = np.arange(1, 10)
+print(arr, '\n')
+
+# Reshape to 3x3 matrix
+arr = arr.reshape(3, 3)
+print(arr, '\n')
+
+# Reshape back to the original size
+arr = arr.reshape(9) # generates 1D array
+print(arr)
+
+arr = arr.reshape(1, 9) # generates 2D array
+print(arr)
+
+arr = arr.reshape(2, 5) # ValueError
+print(arr)
+-----------------------------------------------------
+import numpy as np
+
+arr1 = np.arange(12)
+
+arr2 = arr1.reshape(2, 6)
+arr3 = arr1.reshape(6, 2)
+arr4 = arr1.reshape(3, 4)
+arr5 = arr1.reshape(12, 1)
+arr6 = arr1.reshape(4, 3)
+
+print('Arr1:\n', arr1)
+print('Arr2:\n', arr2)
+print('Arr3:\n', arr3)
+print('Arr4:\n', arr4)
+print('Arr5:\n', arr5)
+print('Arr6:\n', arr6)
+-------------------------------------------------------
+import numpy as np
+
+arr = np.arange(1, 10).reshape(3, -1) # Here python infers/decides the number of columns by itself.
+print(arr)
+-------------------------------------------------------
+import numpy as np
+
+arr1 = np.arange(1, 10) #arange always generates 1D array
+arr2 = np.arange(2, 25, 2)
+arr3 = arr1.reshape(3, -1) # Reshape generates 1D, 2D and 3D arrays and so on
+arr4 = arr2.reshape(4, -1)
+arr5 = arr2.reshape(2, -1)
+arr6 = arr2.reshape(3, -1)
+arr7 = arr2.reshape(-1, 4) # Numpy predicts and fixes number of rows
+arr8 = arr2.reshape(-1, -1) #ValueError. Can only specify one unknown dimension
+
+print('Arr1:\n', arr1)
+print('Arr2:\n', arr2)
+print('Arr3:\n', arr3)
+print('Arr4:\n', arr4)
+print('Arr5:\n', arr5)
+print('Arr6:\n', arr6)
+print('Arr7:\n', arr7)
+print('Arr8:\n', arr8)
+---------------------------------------------------------
+import numpy as np
+
+array1 = np.array([1, 3, 5, 0, 2, 3, 4, 5, 13, 17, 23, 29])
+print(array1.shape)
+print(type(array1))
+print(array1)
+---------------------------------------
+import numpy as np
+
+array1 = np.array([1, 3, 5, 0, 2, 3, 4, 5, 13, 17, 23, 29])
+
+array1.shape = (6, 2)
+print(array1.shape)
+print(array1)
+
+array1.shape = (3, 4)
+print(array1.shape)
+print(array1)
+
+array1.shape = (4, 3)
+print(array1.shape)
+print(array1)
+
+#array1.shape = (4, 2) # Error New shape of the array must consist of same number of elements as that of original array
+#print(array1.shape)
+#print(array1)
+-------------------------------------------------
+import numpy as np
+
+matrix1 = np.array([[3, 4, 5], [2, 6, 9]])
+matrix2 = np.array([[3, 4], [3, 5], [2, 6]])
+
+matrix3 = np.dot(matrix1, matrix2)
+
+print('Matrix3=\n', matrix3)
+(r1*c1, r1*c2)
+(r2*c1, r2*c2)
+
+(3*3 + 4*3 + 5*2), (3*4 + 4*5 + 5*6)
+(2*3 + 6*3 + 9*2), (2*4 + 6*5 + 9*6)
+
+(9+12+10), (12+20+30)
+(6+18+18), (8+30+54)
+[ (31, 62)
+  (42, 92) ]
+---------------------------------------------
+import numpy as np
+
+array = np.array([2, 4, 6, 8, 9, 19])
+
+array2 = array + 5 # Broadcasting. Adding a scalar quantity to every element of the array
+
+print(array)
+print(array2)
+------------------------------------
+import numpy as np
+
+array = np.array([[2, 4, 6, 8], [9, 19, 4, 10]])
+
+array2 = array + 5 # Broadcasting. Adding a scalar quantity to every element of the array
+
+print(array)
+print(array2)
+--------------------------------------
+import numpy as np
+
+matrix1 = np.array([[3, 3, 4], [2, 3, 9]])
+matrix2 = np.array([[2, 5, 4], [2, 3, 19]])
+
+sum_matrix = matrix1 + matrix2
+difference_matrix = matrix1 - matrix2
+product_matrix = matrix1 * matrix2
+quotient_matrix = matrix1 / matrix2
+
+print(sum_matrix)
+print(difference_matrix)
+print(product_matrix)
+print(quotient_matrix)
+------------------------------------------
+import numpy as np
+import scipy
+
+array = np.array([[1, 1, 3, 3, 4, 4, 4, 5, 7, 7, 8, 9, 12]])
+
+mean   = np.mean(array)
+median = np.median(array)
+mode   = scipy.mode(array)
+
+print(f'Mean = ', mean)
+print(f'Median = ', median)
+print(f'Mode = ', mode)
+---------------------------------------------
+num = 50
+
+while(num < 50):
+	# do something
+	pass
+else:
+	# do something else
+	pass
+---------------------------------------------
+To enforce elements of same type to encapsulated, we must use array from the module array
+array.array stores elements of same type only.
+-----------------------------------------------------
+
+{"airline" : "akasa", "source" : "chennai", "destination" : "jaipur", 
+"duration" : 3.25, "fare" : 9200, "id" : 1}
+
+---------------------------------------------------------------
+import numpy as np
+def f(x, y):
+	return 10 * x + y
+
+my_aaray = np.fromfunction(f, (5, 4), dtype = int)
+print(my_aaray)
+------------------------------------------------------
+import numpy as np
+def f(x, y):
+	return 10 * x + y
+
+my_aaray = np.fromfunction(f, (5, 4), dtype = int)
+
+# Slicing the Numpy Arrays:
+print(my_aaray[2, 3]) # my_array[2][3]
+print(my_aaray[0:5, 1]) # From Row-1 to Row-5, print the 2nd element
+print(my_aaray[ : , 1]) # From all rows, print 2nd element
+print(my_aaray[1:3, : ]) # From Row-2 to Row-3, print all elements
+-------------------------------------------------------
+import numpy as np
+
+import numpy as np
+def f(x, y):
+	return 10 * x + y
+
+my_array = np.fromfunction(f, (5, 4), dtype = int)
+
+print(f'Before:\n {my_array}')
+#my_array[:, [0, -1]] = 0  #For all Rows, set 0 to 1st and last columns
+my_array[[0, -1], :] = 0 #For 1st row and last row, set all elements to 0
+
+#After:
+print(f'After:\n {my_array}')
+----------------------------------------------------
+import numpy as np
+
+import numpy as np
+def f(x, y):
+	return 10 * x + y
+
+my_array = np.fromfunction(f, (5, 4), dtype = int)
+
+my_array[[0, 1, -1], :] = 0 #For 1st row and last row, set all elements to 0
+
+#After:
+print(f'After:\n {my_array}')
+---------------------------------------------------
 
 
------------------------------------------------------------------------------------------------------------------------------------------------------------
-day 9 wednesday 2-7-2025
+---------------------------------------------------
+5 3
+1 3 5 7 9
 
-searching and sorting algorithms
-lenear search 
+9  7  5  3  1
 
+b1 = 9 * (0+1) = 9
+b2 = 7 * (0+1) = 7
+b3 = [5 * (0+1)] + [3 * (1+1)] + [1 * (1+1)] = 5+6+2=13
+total price = 9 + 7 + 13 = 29
+------------------------------------
+b1 = 9 * (0+1) = 9
+b2 = [7 * (0+1)] + [5 * (1+1)] = 7+10 = 17
+b3 = [3 * (0+1)] + [1 * (1+1)] = 3+ 2 =  5
+total price = 9 + 17 + 5 = 31
+---------------------------------------
+b1 = [9 * (0+1)] + [7 * (1+1)] + [5 * (1+1)] = 9 + 14 + 10 = 33
+b2 = [3 * (0+1)] = 3
+b3 = [1 * (0+1)] = 1
+total price = 33 + 3 + 1 = 37
+------------------------------------------
+b1 = [9 * (0+1)] + [7 * (1+1)] +  = 9 + 14 + 10 = 33
+b2 = [5 * (1+1)] + [3 * (1+1)] = 3
+b3 = [1 * (0+1)] = 1
 
+total_price = [9 * (0+1)] + [7 * (0+1)] + [5 * (0+1)] + [3 * (1+1)] + [1 * (1+1)]
+total_price = 1 + 5 + 6 + 9 + 14 = 29
 
+-----------------------------
+def get_minimum_cost(k, costs):
+	costs.sort(reverse=True)
+	total_min_cost = 0
+	n = len(costs)
+	for i in range(n):
+		total_min_cost += (i // k + 1) * costs[i]
+
+	return total_min_cost
+
+print( get_minimum_cost(3, [9, 7, 5, 3, 1]))
+------------------------------------
+Minimum numbers of coins for gievn amount and given denominations:
+
+def get_minimum_coins(amount, denominations):
+	denominations.sort(reverse=True)
+	number_of_coins = 0
+	n = len(denominations)
+	i = 0
+	while amount > 0:
+		number_of_coins += amount // denominations[i]
+		amount = amount % denominations[i]
+		i += 1
+	return number_of_coins
+
+print( get_minimum_coins(88, [1, 2, 5, 20]))
+-------------------------------------------------------
+import numpy as np
+
+my_array = np.zeros((8, 8), dtype = int)
+#my_array[1::2, ::2] = 8
+#Starting from row-index-1 and there after, for all alternatives rows, and for all columns from index 0 and there after alternative columns, replace the cells with value 8
+my_array[::2, 1::2] = 1
+# Odd indexed-rows Even Indexed-Columns
+print(my_array)
+----------------------------------------------
+import numpy as np
+
+# nan is not a number
+
+print(0 * np.nan)
+print(np.nan == np.nan)
+print(np.inf > np.nan)
+print(np.nan - np.nan)
+print(np.nan in set([np.nan]))
+print(0.3 == 3 * 0.1)
+-------------------------------------------------
+list1 = [2, 3, 5]
+
+string = ' '.join(map(str, list1)) # convert a list of items of tyep other than str into a string
+print(string)
+print(type(string))
+
+list2 = ['23', '55', '67']
+string = ' '.join(list2) 
+print(string)
+-------------------------------------------------
+# Create a checkerboard 8x8 matrix using the tile function 
+import numpy as np
+
+#my_matrix = np.array([[0,1],[1,0]])
+#print(my_matrix)
+
+chess_board = np.tile( np.array([[1, 0],[0, 1]]), (4,4))
+# chess_board = np.tile( np.array([['*', ' '],[' ', '*']]), (4,4))
+#print('\n', chess_board)
+
+list1 = []
+for array in chess_board:
+    list1 = list(array)
+    string = ' '.join(map(str, list1))
+    print(string)
+------------------------------------------------
+# Normalize a 5x5 random matrix
+import numpy as np
+
+my_array = np.random.random((5,5))
+#print(my_array)
+
+values = my_array - np.mean (my_array)
+print('\n', values)
+
+values = np.std (my_array)
+print('\n', values)
+
+my_array = (my_array - np.mean (my_array)) / (np.std (my_array))
+print(my_array)
+-----------------------------------------------------------------
+def read_heights(section):
+    m = int(input(f'Enter number of girls of section-{section}: '))
+    heights = []
+    print(f'Enter {m} heights of girls of Section-{section}: ')
+    for i in range(m):
+        heights.append(int(input()))
+    return heights
+
+list1 = read_heights('A')
+list2 = read_heights('B')
+
+list1.sort()
+list2.sort()
+merged_list = list()
+
+j = 0
+i = 0
+while i < len(list1) and j < len(list2):
+    if list1[i] < list2[j]:
+        merged_list.append(list1[i])
+        i += 1
+    else:
+        merged_list.append(list2[j])
+        j += 1
+merged_list.extend(list1[i:])
+merged_list.extend(list2[j:])
+
+print(merged_list)
+-------------------------------------------
+Harry-Potter Problem
+
+Read N (Number of gold coins)
+List of N intergers (specifying value of N Gold coins)
+Read Q (The Number instructions each of which is either HARRY or REMOVE
+Read X (The value at which the Monk will go to sleep)
+
+Monk goes to sleep: The sum of gold coins in Monk's bag (Stack)
+Print X as O/P
+
+'''
+Read N (Number of gold coins)
+List of N intergers (specifying value of N Gold coins)
+Read Q (The Number instructions each of which is either HARRY or REMOVE
+Read X (The value at which the Monk will go to sleep)
+
+Monk goes to sleep: The sum of gold coins in Monk's bag (Stack)
+Print X as O/P
+'''
+
+n = int(input('Enter number of Gold coins: '))
+coin_values = []
+
+print(f'Enter values of {n} Gold coins')
+for i in range(n):
+    coin_values.append(int(input()))
+
+q = int(input('Enter number of instructions: '))
+instructions = list()
+
+print(f'Enter the {q} instructions')
+for i in range(q):
+    instructions.append(input().strip().lower())
+
+x = int(input('Enter value of X: '))
+
+monk_stack = []
+condition_met = False
+
+print(coin_values, '\n', instructions)
+
+j = 0
+for i in range(0, q):
+    if instructions[i] == 'harry' and i < len(coin_values):
+        monk_stack.append(coin_values[j])
+        j += 1
+    elif instructions[i] == 'remove':
+        monk_stack.pop()
+    if sum(monk_stack) == x:
+        condition_met = True
+        break #break the loop
+
+if condition_met:
+    print(f'Number of coins = {len(monk_stack)}')
+else:
+    print('-1')
+------------------------------------------------------------
+a = int(input('Enter value of a: '))
+b = int(input('Enter value of b: '))
+m = int(input('Enter value of m: '))
+
+a_power_b = a ** b
+
+remainder = a_power_b - m * (a_power_b // m)
+
+print(f'Remainder = {remainder}')
+--------------------------------------------------------
+n = int(input('Enter number of test cases: '))
+
+prime_numbers = []
+
+print(f'Enter {n} number of PRime numbers')
+for i in range(n):
+    prime_numbers.append(int(input()))
+
+for i in range(n):
+    if prime_numbers[i] == 2:
+        print('0 0')
+    elif prime_numbers[i] == 3:
+        print('1 0')
+    elif prime_numbers[i] == 5:
+        print('1 1')
+    elif prime_numbers[i] == 7:
+        print('0 1')
+----------------------------------------------------------
+1. Infix to Postfix Program
+Where all operators are of same precedence.
+
+2. Infix to Postfix Program
+Where operators are of different precedence.
+
+3. Infix to Postfix Program
+Where operators are of different precedence and we use paranthesis to override the precedence of operators.
+
+input_str = a - b + c
+
+present_char = c
+
+stk: a b -
+operator: +
+
+postfix_str = a b - c +
+
+i = 0
+until input_str has character:   # a - b + c
+	if i == 0:
+		stk = input_str[i]
+		i++
+	else:
+		stk=post
+		post=''
+	operator = input_str[i]
+	i++
+	present_char = input_str[i]
+	i++
+	postfix_str = stk + present_char + operator
+	stk = ''
+	present_char = ''
+	operator = ''
+	
+itr=1, i=0
+	stk = a
+	i=1
+	opr= -
+	i=2
+	char=b
+	i=3
+	post=a b -
+	stk=char=opr=''
+itr=2, i=3
+	stk=a b -
+	post=''
+	opr=+
+	i=4
+	char=c
+	i=5
+	post= ab-c+
+	
+a+b-c+m
+ab+ - c + m
+ab+c- + m
+ab+c-m+
+----------------
+infix_expr = input('Enter the infix notation expression: ')
+
+i               = 0
+stk             = ''
+postfix_expr    = ''
+present_char    = ''
+operator        = ''
+
+for char in infix_expr:
+	if i == len(infix_expr):
+		break
+	if i == 0:
+		stk = infix_expr[i]
+		i += 1
+	else:
+		stk = postfix_expr
+		postfix_expr = ''
+	operator = infix_expr[i]
+	i += 1
+	present_char = infix_expr[i]
+	i += 1
+	postfix_expr = stk + present_char + operator
+	stk = ''
+	present_char = ''
+	operator = ''
+
+print(f'Postfix Expression = {postfix_expr}')
+-------------------------------------------------------
+Must be done:
+closure, lambda, Hashing (session15)
+Problem Solving: backtracking, greedy, dynamic programming (session16)
+numpy pandas and matplotlib seaborn (Optionally DB) (session18-20)
+PROJECT (session20-23)
+Optional:
+radix sort, heap sort, bucket sort, AVL Tree (session17)
+flask with mongo or Mysql
+(Graph Algorithms: DFS, BFS, Djiktras, N-Queens, Travel Slalesman)
+packages/modules: os (file handling), sys, math, tkinter, pickle
