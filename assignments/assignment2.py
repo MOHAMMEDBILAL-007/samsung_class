@@ -1,12 +1,5 @@
-# biggest digit in a number
-input_number =input("enter the number to fing the biggest digit : ")
-max_digit = int(input_number[0])
-for i in input_number:
-    if max_digit < int(i):
-        max_digit = int(i)
-print("maximum digit in the number is :",max_digit)
-#---------------------------------------------------------------------------------
-# 2nd smallest digit
-# input_number = input("enter the number :")
-# for i in 
+def second_smallest_digit(n):
+    digits = sorted(set(map(int, str(n))))
+    return digits[1] if len(digits) >= 2 else -1
 
+print(second_smallest_digit(846873))  # Output: 4
