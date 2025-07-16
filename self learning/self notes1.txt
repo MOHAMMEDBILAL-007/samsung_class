@@ -1,0 +1,344 @@
+python - 20
+function:
+function is a block of code that is reusable 
+it helps reduce the code size where we use certain code again and again
+to write a function we need a key word 'def' that defines that a funcyion is being defined
+we need to write the body of the function inside the indentation of the function
+if we dont want to write the body of the function we can use a key word 'pass'
+pass means there is nothing to exicute but the good part is that you wont get an error
+this is usefull while coding in groups, one part of the code is written by one person as a function and other part can be written by some one else
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 21
+function arguments
+4 - types of arguments that we can pass to a function
+defautl arguments
+key word arguments 
+variable length arguments
+required arguments
+"in a function if there are multiple return functions then the first to return is only considered then returned to the function"
+If you use **args for variable-length keyword arguments, they are collected into a dictionary.
+we can pass a function as an a argument to another function 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 22
+lists:
+list is a ordered collection of data items
+we can modify the list after creation
+there can be multiple data types in a single list
+they store multiple items in one veriables
+"IN PYTHON VARIABLES DOESENT STORE DATA BY THEMSELVES BUT JUST STORES THE ADDRES OF THE DATA IN THE MEMORY IT IS LIKE A POINTER TOWARDS THE DATA"
+"NORMALLY WHEN WE GIVE 'A' AS A LIST AND B=A IF I ALTER EXISTING LIST 'B' BY APPENDING OR POPING 'A' WILL ALSO CHANGE"
+list items are stored in ""[]"" square brackets seperated by ',' comma
+we can acces the elements of the list using index of the elements starting from 0
+in python we have -ve indexing starting at the end of the list as -1 following -2 for last second element and so on
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 23
+list methods:
+append(x)->         Adds an item x to the end of the list.
+extend(iterable)->	Extends the list by appending all the items from the iterable.
+insert(i, x)->      Inserts item x at position i.
+remove(x)->         Removes the first occurrence of item x. Raises ValueError if not found.
+pop([i])->      	Removes and returns the item at position i. If no index is specified, removes the last item.
+clear()	->          Removes all items from the list.
+index(x[, start[, end]])->	Returns the index of the first occurrence of item x. Raises ValueError if not found.
+count(x)->      	Returns the number of occurrences of item x.
+sort(key=None, reverse=False)->	Sorts the list in ascending order. Can be customized using key and reverse.
+reverse()->     	Reverses the elements of the list in place.
+copy()->        	Returns a shallow copy of the list.
+
+"""
+	in python when we create a variable and assign a value to it 
+	it only points towards the memory location of the data
+	if a new variable is created as = as the orignal 
+	variable it also points to the same address
+	there is no copy is being made for the new variable 
+	so if the new variable changes then tha old variable also changes
+	to avoide such conflict we use copy function	
+"""
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 24
+tuple:
+is ordered collection of data items
+it can store multiple datatypes
+we cannot modify the tuple after it is created
+tuple elements are stored in ""()""
+tuple elements are accessable using index
+tuple elements are iterable
+if we store single element in a tuple the python  interpreter will get confused 
+for a single data and it will not be considered as a tuple 
+ex:	tup =(3)
+	type(tup)
+	this tup variable is not <class tuple > it will be <class int>
+so to avoide this we need to put a comma after the single element 
+ex:	tup = (3,)
+	type(tup)
+	this tup variable will belong to <class tup>
+
+in tuple there is both +ve indexing and -ve indexing same as list
+tuple sliceing is also same as list
+	tup2 = tup1[start: end : jump step]
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 25
+operations on tuple :
+there is no direct way to modify the tuple
+but you can in directly modify by this method 
+*you need to rewrite the entair tuple and assign all the new values
+*you can us e type casting like convert the tuple into a list and modify the list and turn the list back to tuple
+we can create a tuple by concatnating 2 other tuples : tup3 = tup1+tup2
+count(x)->	Returns the number of times x appears in the tuple
+index(x,start,end)->	Returns the index of the first occurrence of x if found between start and end. Raises ValueError if not found
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 28
+f string:
+it is used to string formating
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 29
+docstring ,pep-8
+
+docstrings are string literals that appears right after the defination of a class ,method,function or modules
+doc strings must be written above the body of the method
+comments vs doc string:
+	comments are completely ignored by python interpreter 
+	docstring they are understood by python interpreter and are used for documenting purpose
+
+pep 8
+python enhancement proposal
+it is the official style guide for writing Python code
+there are many file and documents that provide help to keep your code clean, consistent, and easy to collaborate on.
+
+zen of python
+it is an easter egg in python 
+it is a poem that is displayed when we import this
+"this" is the module name
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 30
+recursion
+calling a function inside of a function is called recursion
+if we are writing a recursive code in python then we need to create a base case to terminate the recursion or else 
+recursion error will occur due to limit in number of recursions can occur
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 31
+sets
+is a collection of well defined objects
+repeated values doesent exist in sets 
+set is un-ordered datastructure
+elements are stored in "{}" 
+cannot modify the elements in the set
+cannot be accessed by index 
+it can store multiple datatypes
+an empty set is considered a dictionary 
+s = {} # this is a dictionary class 
+to specify it as a set we nwwd to do : s = set()
+sets can be accesed in a for loop using "in" operation
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 32
+set methods
+
+set operations
+
+add(elem)	Adds an element to the set
+update(iterable)	Adds multiple elements from an iterable
+remove(elem)	Removes an element; raises KeyError if not found
+discard(elem)	Removes an element if it exists (no error if not)
+pop()	Removes and returns an arbitrary element
+clear()	Removes all elements from the set
+copy()	Returns a shallow copy of the set
+union(set)	`A	B`
+intersection(set)	A & B	Returns intersection
+difference(set)	A - B	Returns difference
+symmetric_difference(set)	A ^ B	Returns symmetric difference
+issubset(set)	A <= B	Checks if current set is subset
+issuperset(set)	A >= B	Checks if current set is superset
+isdisjoint(set)	-	True if no elements in common
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 33
+dictionaries
+it is a combination of key value pairs
+they are ordered collection
+each key kan store multiple values 
+they are stored inside "{}" seperated by "comma" but key and values are seperated by ":"
+they cannot be accessed by index
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+pythin 34
+dictionary methods
+dict.clear()	Removes all items from the dictionary
+dict.copy()	Returns a shallow copy of the dictionary
+dict.fromkeys(seq, val)	Creates a new dictionary with keys from seq, all set to val
+dict.get(key, default)	Returns the value for key if present, else default
+dict.items()	Returns a view object of (key, value) pairs
+dict.keys()	Returns a view object of all keys
+dict.values()	Returns a view object of all values
+dict.pop(key[, default])	Removes specified key and returns the value
+dict.popitem()	Removes and returns the last inserted (key, value) pair
+dict.setdefault(key[, default])	Returns value of key, sets it to default if not present
+dict.update(other_dict)	Updates the dictionary with key-value pairs from other_dict
+dict.__contains__(key)	Returns True if key exists (same as key in dict)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 35
+loop with else
+in python else statment can also be used with loops 
+after execution or before execution of the loop when the condition given to the loop becomes false the else is executed
+it means else block is executed only when if the loop is completed or loop cannot be executed atall
+when the loop is breaked in the middel of the execution then the else block doesen't exicute
+it is used with both for and while loop
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 36
+exception handeling
+it is the proccess of responding to errors
+here we use try ,except code 
+try block tries some code and then except takes the error as input or just executes the except block 
+here we can specify what kind of error are we expecting from the code or just take whatever error is raised and print the same error 
+The default except block (like except Exception: or except:) must always be last
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 37
+finally key word
+it is used while executing try except code 
+finally is a block of code that executes no matter whet ,wether try block is executed or except block is executed
+finallykey word is usually used in functions where we return certain values the code below the return function is not executed
+if try block has return function and except block had a return function then even after returning values finally block is executed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 38
+raising custom errors
+some times we want to reis an error so that further code cannot be executed 
+so we use "raise error" function
+this function allows us to custom built the errors
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 41
+short hand if else
+it is a convenient way to assign a value to a a variable based on condition 
+to avoide writing syntax that is messy and big you can use short hand if else statment 
+how ever it is not recommended to use in the complex logic building there we should use if else statment correctly
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 42
+enumerate function
+some times while a is loop executing we need to know which iteration or which index is executing 
+we can do this by using a tempraory variable iterating along with tthe loop
+or
+we can use enumerate function
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 43
+virtual environment in python
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 44
+how import function works
+you can import the whole modules but you need to specify the module name in the prefix of the function
+you can import the specific function from the module
+you can import the module as a shortform and use that as the prefix while calling the function
+you can import the specific function from the module as a short form then directly use the short form function
+you can import your own modules and call the variables or the functions from your whole file
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 45
+if __name__ == "__main__"
+when we import our module we may run into some problems like
+if there is some code that is to br executed when the module is executed
+function calls all will be executed as soon as we import the module in to our code
+to wether the code is being executed directly from module or from the main we use ""if __name__ == "__main__" ""
+we put this code in modules because when module is seperately executed the name variable will be main
+when imported the name variable will be name of the module so then the module code will not execute when imported
+to confirm that the code is being executed inside the main of the code
+__name__ is a python builtin variable its value is determined by the control of the code here if the controll is in the module then the name is set to name of the module
+if the control is in the code then the __name__ is set to main
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 46
+OS module in python
+os.getcwd()	Returns the current working directory.
+os.chdir(path)	Changes the current working directory to the specified path.
+os.listdir(path='.')	Lists files and directories in the given path.
+os.mkdir(path)	Creates a single directory.
+os.makedirs(path)	Creates directories recursively.
+os.rmdir(path)	Removes a single directory (must be empty).
+os.removedirs(path)	Removes directories recursively.
+os.rename(src, dst)	Renames a file or directory.
+os.remove(path)	Removes a file.
+os.stat(path)	Returns metadata like size, modified time, etc.
+
+2. Path Operations (with os.path)
+Function	Description
+os.path.join(path1, path2, ...)	Joins paths in a platform-independent way.
+os.path.exists(path)	Checks whether the path exists.
+os.path.isdir(path)	Checks whether the path is a directory.
+os.path.isfile(path)	Checks whether the path is a file.
+os.path.basename(path)	Gets the file or directory name from a path.
+os.path.dirname(path)	Gets the directory name from a path.
+os.path.abspath(path)	Returns the absolute version of a path.
+os.path.getsize(path)	Returns the size of a file in bytes.
+os.path.splitext(path)	Splits the path into root and extension.
+
+3. Environment Variables
+Function	Description
+os.environ	A dictionary representing the user environment.
+os.getenv(key, default=None)	Gets the value of an environment variable.
+os.putenv(key, value)	Sets the value of an environment variable.
+os.unsetenv(key)	Unsets an environment variable.
+
+4. Process and System Info
+Function	Description
+os.name	Returns the name of the OS ('posix', 'nt', etc.).
+os.system(command)	Executes a shell command.
+os.getpid()	Returns the current process ID.
+os.getppid()	Returns the parent process ID.
+os.cpu_count()	Returns the number of CPUs in the system.
+os.uname()	Returns system info (Unix only).
+
+5. File Descriptor Operations
+Function	Description
+os.open(path, flags)	Opens a file (low-level), returns file descriptor.
+os.read(fd, n)	Reads n bytes from a file descriptor.
+os.write(fd, str)	Writes to a file descriptor.
+os.close(fd)	Closes the file descriptor.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 48
+local variable and global variable
+if a variable is created in a function or a method it cannot be accessed by outside of the method this is called local variable
+a variable that is created outside of a function  it can be accessed inside of the function as long as there is no variable with the same name in the function
+if there exist a variable same name as the global variable inside the function if the variable is called then local variable is returned
+but the global variable value doesent changed due to presence of the local variable with the same name but different value
+a global variable witha the same name as the local variable are different from each other
+use the "global" key word to specify that the operation performed on the variable are actually on the global variable
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 49
+file handeling in python
+to open a file use "open" function and it takes 2 arguments "name of the file" and "mode"
+mode can be 
+'r' for reading
+'w' for writing
+'a' for appending
+if mode is not specified then the default mode is 'r'
+we can read a file by specifying it to be readed as text by using 'rt' mode
+if we need it to be red as binary then use 'rb' mode
+to use open function the file must exist for 'r' mode and 'a' mode
+if we use a fule that doesent exist and we usw 'w' mode then the file is created on its own
+after opening and performing the operation we need to close the file with .close() method
+when i open a file then can operate only once  then close and open again for another operation even if the mode is same
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 50
+methods of file handling
+.readline() reads lines of the file one by one
+.readlines() reads all the lines at once from the file 
+we can use this to iterate over the text in the file
+writelines("iterable object") writes the iterable elements in the file
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 51
+seek() and tell methods in file handeling
+after oprning a file if we used seek() method like seek(9) this will decide that file will be operated from 9th charector in the text file
+after that if i used read() method then the file will be reded from 10 position
+tell() is used to identify the on which position the control is in
+truncate() this is used to specify that file should only contain the following number of charecters
+truncate(10) this means only 10 charectors should be in the filr other than that there should be no charecters
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 52
+lambda functions
+a lambda function is a small anonymus function without a name it defines using lambda key word and has the following syntax
+lambda arguments : expression this argument itself can be used insted a function
+
+lambda functions usually used to make 'mini functions' for certain expressions 
+difference between lambda function and normal function is that normal functions require a certain structure 
+like def key word return function so to avoide we use lambda functions
+lambda functions can take all the different types of arguments as a normal functions
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+python 53
+map,filter,reduce in python
+
+map function is used to map a set of elements into a list 
