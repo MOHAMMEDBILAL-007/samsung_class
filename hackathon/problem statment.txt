@@ -1,8 +1,0 @@
-BANGALORE TRAFFIC ANALYSIS
- 
-Bangalore, one of India’s fastest-growing metropolitan cities, experiences severe traffic congestion, with over 10 million daily travellers. 
-The city’s traffic issues start from poor traffic management, unplanned roadside construction, limited road capacity, and ineffective time-based traffic control. 
-These challenges result in increased travel time, frequent accidents, high pollution levels, and even delays for emergency services such as ambulances.
-
-To address these issues, we aim to analyze traffic patterns in some of the busiest areas of Bangalore using real-world traffic data collected over several days.
-The goal is to identify key problem zones, peak congestion times, and root causes, ultimately suggesting data-driven solutions for better traffic planning and management.
