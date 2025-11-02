@@ -1149,14 +1149,3 @@ for char in infix_expr:
 	operator = ''
 
 print(f'Postfix Expression = {postfix_expr}')
--------------------------------------------------------
-Must be done:
-closure, lambda, Hashing (session15)
-Problem Solving: backtracking, greedy, dynamic programming (session16)
-numpy pandas and matplotlib seaborn (Optionally DB) (session18-20)
-PROJECT (session20-23)
-Optional:
-radix sort, heap sort, bucket sort, AVL Tree (session17)
-flask with mongo or Mysql
-(Graph Algorithms: DFS, BFS, Djiktras, N-Queens, Travel Slalesman)
-packages/modules: os (file handling), sys, math, tkinter, pickle
